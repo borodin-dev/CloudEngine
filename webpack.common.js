@@ -85,8 +85,11 @@ module.exports = {
             },
             //svg converter
             {
-                test: /\.svg$/,
-                loader: 'svg-url-loader',
+                test: /\.svg/,
+                use: {
+                    loader: 'svg-url-loader',
+                    options: {}
+                }
             },
             //lints
             {

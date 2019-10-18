@@ -8,6 +8,7 @@
 		}
 		&__title {
 			text-align: center;
+			margin: 160px 0 0;
 			h1 {
 				font: 2.25rem $RalewayBold;
 				text-transform: initial;
@@ -53,25 +54,33 @@
 		}
 	}
 	/* Marketing Block end */
+	/* Portfolio Block start */
 	.portfolio-block{
+		margin-bottom: 0;
 		&__01,
 		&__02,
-		&__03{ padding-left: 0; }
+		&__03{
+			padding: 60px 0; }
 	}
-	.dark-text .request-block{
-		padding-left: 0;
-		&__form{
-			.form-sendbtn{
-				width: 100%;
-				display: inline-block;
-				align-items: unset;
-			}
+	/* Portfolio Block end */
+	/* Request Block start */
+	.dark-text.request-block{
+		padding: 60px 0 68px;
+		border-bottom: 1px solid $light-gray-color;
+		.request-block__form{ padding-bottom: 0; }
+		.form-sendbtn{
+			width: 100%;
+			display: inline-block;
+			align-items: unset;
 		}
 	}
+	/* Request Block end */
+	/* Footer Block start */
 	.dark-text.footer-block .footer-social {
 		margin: 0 20px;
 		svg{ margin: 10px 0; }
 	}
+	/* Footer Block end */
 }
 @media screen and (min-width: 361px) and (max-width: 479px) {
 	.container{ padding-left: 15px; }
@@ -84,6 +93,7 @@
 		}
 		&__title {
 			text-align: center;
+			margin: 160px 0 0;
 			h1 {
 				font: 2.25rem $RalewayBold;
 				text-transform: initial;
@@ -129,21 +139,28 @@
 		}
 	}
 	/* Marketing Block end */
+	/* Portfolio Block start */
 	.portfolio-block{
+		margin-bottom: 0;
 		&__01,
 		&__02,
-		&__03{ padding-left: 0; }
-	}
-	.dark-text .request-block{
-		padding-left: 0;
-		&__form{
-			.form-sendbtn{
-				width: 100%;
-				display: inline-block;
-				align-items: unset;
-			}
+		&__03{
+			padding: 60px 0 88px;
 		}
 	}
+	/* Portfolio Block end */
+	/* Request Block start */
+	.dark-text.request-block{
+		padding: 60px 0 88px;
+		border-bottom: 1px solid $light-gray-color;
+		.request-block__form{ padding-bottom: 0; }
+		.form-sendbtn{
+			width: 100%;
+			display: inline-block;
+			align-items: unset;
+		}
+	}
+	/* Request Block end */
 }
 @media screen and (min-width: 480px) and (max-width: 767px) {
 	/* header block start */
@@ -152,6 +169,7 @@
 		.container { padding: 0 16px; }
 		&__title {
 			text-align: center;
+			margin: 160px 0 0;
 			h1 {
 				font: 2.25rem $RalewayBold;
 				text-transform: initial;
@@ -198,15 +216,19 @@
 		}
 	}
 	/* Marketing Block end */
+	/* Portfolio Block start */
 	.portfolio-block{
 		&__01,
 		&__02,
-		&__03{ padding-left: 0; }
+		&__03{ padding: 88px 0 97px; }
 	}
+	/* Portfolio Block end */
+	/* Request Block start */
 	.dark-text.request-block{
 		padding-left: 0;
 		.container { padding: 0 16px; }
 	}
+	/* Request Block end */
 }
 @media screen and (min-width: 768px) and (max-width: 991px) {
 	/* header block start */
@@ -250,6 +272,7 @@
 		}
 	}
 	/* Marketing Block end */
+	/* Portfolio Block start */
 	.portfolio-block{
 		.container{
 			padding: 0;
@@ -259,6 +282,8 @@
 		&__02,
 		&__03{ padding-left: 145px; }
 	}
+	/* Portfolio Block end */
+	/* Request Block start */
 	.dark-text.request-block{
 		padding-left: 145px;
 		.container{
@@ -266,6 +291,7 @@
 			margin: 0;
 		}
 	}
+	/* Request Block end */
 }
 @media screen and (min-width: 992px) and (max-width: 1199px) {
 	/* header block start */
@@ -285,11 +311,12 @@
 	/* Marketing Block end */
 	.pl-58{ padding-left: 58px; }
 	.ml-45{ margin-left: 45px; }
+	/* Request Block start */
 	.dark-text .request-block{
 		&__content{ margin-left: 45px; }
 		&__form{ margin-left: 45px; }
 	}
-	/* Marketing Block end */
+	/* Request Block end */
 }
 @media screen and (min-width: 1200px) and (max-width: 1359px) {
 	/* header block start */
@@ -300,25 +327,10 @@
 	/* header block end */
 	.pl-58{ padding-left: 58px; }
 	.ml-45{ margin-left: 45px; }
+	/* Request Block start */
 	.dark-text .request-block{
 		&__content{ margin-left: 45px; }
 		&__form{ margin-left: 45px; }
 	}
+	/* Request Block end */
 }
-
-/* Media Queries: Tabled Portrait */
-@media screen and (max-width: 768px) {
-	#primary { width:100%; }
-	#secondary { width:100%; margin:0; border:none; }
-}
-//360×640
-//1366×768 – 12.85%
-//1920×1080 – 7.76%
-//375×667 – 4.94%
-//1440×900 – 3.32%
-//1280×800 – 2.67%
-//isPhone: w >= 320 && w < 480,
-//isTablet: w >= 480 && w < 768,
-//isLargeTablet: w >= 768 && w < 1024,
-//isDesktop: w >= 1024 && w < 1280,
-//isLargeDesktop: w >= 1280

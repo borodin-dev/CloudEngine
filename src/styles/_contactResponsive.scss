@@ -1,5 +1,10 @@
-
+@media screen and (max-width: 480px){
+	/* Contact Header Block start */
+	.contact-header{ padding: 0 25px; }
+	/* Contact Header Block end */
+}
 @media screen and (max-width: 767px) {
+	/* Contact Header Block start */
 	.contact-header{
 		text-align: center;
 		&__map{
@@ -7,12 +12,16 @@
 		}
 		.send-btn{ width: auto; }
 	}
+	/* Contact Header Block end */
+	/* Footer Block Start */
 	.white-text.footer-block{
 		padding: 0 15px 36px;
 		.border-top{ border-top: 1px solid #dee2e6 !important; }
 	}
+	/* Footer Block end */
 }
 @media screen and (min-width: 768px) and (max-width: 991px) {
+	/* Contact Header Block start */
 	.contact-header{
 		text-align: center;
 		padding: 0 0 0 100px; 
@@ -21,19 +30,29 @@
 		}
 		.send-btn{ width: auto; }
 	}
+	/* Contact Header Block end */
+	/* Footer Block Start */
 	.white-text.footer-block{
-		padding: 0 0 36px 100px;
 		.border-top{ border-top: 1px solid #dee2e6 !important; }
 	}
+	/* Footer Block end */
 }
 @media screen and (min-width: 992px) and (max-width: 1199px) {
+	/* Contact Header Block start */
 	.contact-header{ padding: 0 0 0 100px; }
+	/* Contact Header Block end */
+	/* Footer Block Start */
 	.white-text.footer-block{
 		padding: 0 105px 36px;
 		.border-top{ border-top: 1px solid #dee2e6 !important; }
 	}
+	/* Footer Block end */
 }
 @media screen and (min-width: 1200px) and (max-width: 1359px) {
+	/* Contact Header Block start */
 	.contact-header{ padding: 0 0 0 100px; }
+	/* Contact Header Block end */
+	/* Footer Block Start */
 	.white-text.footer-block{ padding: 0 105px 36px;}
+	/* Footer Block end */
 }
