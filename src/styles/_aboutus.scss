@@ -30,7 +30,10 @@
 /* About Us Header Block end */
 /* What We Can Block start */
 .wecan{
-	padding: 120px 0 120px 100px;
+	padding: 120px 0 120px 90px;
+	//margin-left: 79px;
+	margin: 0 auto;
+	width: 1280px;
 	.mb-120{ margin-bottom: 120px; }
 	&-title{
 		font: 2.25rem $RalewayBold; /* or 43px */
@@ -55,7 +58,11 @@
 /* What We Can Block end */
 /* Certificate Block start */
 .certificates-block{
-	padding: 120px 0 120px 100px;
+	//padding: 120px 0 120px 100px;
+	padding: 120px 0 120px 90px;
+	//margin-left: 79px;
+	margin: 0 auto;
+	width: 1280px;
 	.mb-120{ margin-bottom: 120px; }
 	&__title{
 		font: 2.25rem $RalewayBold; /* or 43px */

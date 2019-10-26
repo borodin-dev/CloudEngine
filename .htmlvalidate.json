@@ -1,0 +1,10 @@
+{
+  "rules": {
+    "close-order": "error",
+    "deprecated": "error",
+    "doctype-html": "error",
+    "element-name": ["error", { "pattern": "[a-z]"}],
+    "input-missing-label": "error"
+  }
+}
+

@@ -33,6 +33,20 @@ module.exports = {
                     'php-loader'
                 ]
             },
+            // {
+            //     test: /\.html$/,
+            //     use: [
+            //         {
+            //             loader: "file-loader",
+            //             options: { name: "[name].html" }
+            //         },
+            //         { loader: "extract-loader" },
+            //         {
+            //             loader: "html-loader",
+            //             options: { attr: ["img:src"] }
+            //         },
+            //     ]
+            // },
             //styles
             {
                 test: /\.scss$/,
@@ -58,7 +72,7 @@ module.exports = {
             },
             //image
             {
-                test: /\.(jpe?g|png|gif)$/,
+                test: /\.(jpe?g|png|svg|gif)$/,
                 use: {
                     loader: 'url-loader',
                     options: {
@@ -100,6 +114,16 @@ module.exports = {
                     // eslint options (if necessary)
                 }
             },
+            // {
+            //     test: /(htm|html|xhtml|hbs|handlebars|php|ejs)$/,
+            //     loader: 'htmllint-loader',
+            //     exclude: /(node_modules)/,
+            //     query: {
+            //         config: '.htmllintrc', // path to custom config file
+            //         failOnError: true,
+            //         failOnWarning: false,
+            //     },
+            // },
             // {
             //     test: /(htm|html|xhtml|hbs|handlebars|php|ejs)$/,
             //     loader: 'htmllint-loader',

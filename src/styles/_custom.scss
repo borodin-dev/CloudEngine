@@ -62,7 +62,7 @@ button:focus,
 	color: #fff;
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
-	font: 12.5rem $RalewayBold;
+	font: 15.5rem $RalewayBold;
 	line-height: 235px;
 	/* identical to box height */
 	text-transform: uppercase;
@@ -170,13 +170,21 @@ input[type="checkbox"] {
 	visibility: visible;
 	transition: opacity 0.5s;
 }
-#menuToggle:checked ~ .menuOpen .open {	background-color: transparent; }
+#menuToggle:checked ~ .menuOpen .open {
+	background-color: transparent;
+	width: 28px;
+	height: 28px;
+	position: relative;
+	z-index: 9;
+	margin-top: -10px;
+	margin-left: -6px;
+}
 #menuToggle:checked ~ .menuOpen .open:before {
 	content: "";
 	background-color: $primary-color;
 	transform: rotate(45deg);
 	position: absolute;
-	top: 0;
+	top: 12px;
 	right: 0;
 	left: 0;
 	bottom: 0;
@@ -188,7 +196,7 @@ input[type="checkbox"] {
 	background-color: $primary-color;
 	transform: rotate(-45deg);
 	position: relative;
-	top: 0;
+	top: 12px;
 	right: 0;
 	left: 0;
 	bottom: 0;
@@ -225,10 +233,64 @@ input[type="checkbox"] {
 		}
 		.sidebar-left__messenger{
 			bottom: 0;
-			img{
-				width: 100%;
-				text-align: center;
-				padding: 36px 18px;
+			padding: 36px 18px;
+			svg path{
+				transition: .3s ease-out;
+				&:hover{
+					fill: #f7f8fa;
+					opacity: 0.5;
+				}
+			}
+		}
+	}
+}
+.menu-contact__list-mobile{ display: none }
+.menu-contact{
+	padding: 67px 0 0 60px;
+	.logo-lg{ height: 76.5px; }
+	&__kyiv{
+		margin-top: 36px;
+		color: #FFFFFF;
+		p{
+			font: 1rem $RalewayBold;
+			line-height: 19px;
+		}
+	}
+	&__dnepr{
+		margin-top: 46px;
+		color: #FFFFFF;
+		p{
+			font: 1rem $RalewayBold;
+			line-height: 19px;
+		}
+	}
+	.list-tel,
+	.list-mail{
+		color: #FFFFFF;
+		&:hover{ color: $primary-color; }
+	}
+	&__list{
+		margin-top: 64px;
+		color: #FFFFFF;
+		width: 295px;
+		padding: 0;
+		li{
+			list-style: none;
+			line-height: initial;
+			padding: 27px 27px 27px 10px;
+			border-top: 1px solid $light-gray-color;
+			a{
+				color: #FFFFFF;
+				text-decoration: none;
+			}
+			.list-request{
+				font: 1rem $RalewayBold;
+				line-height: 19px;
+				font-feature-settings: 'pnum' on, 'lnum' on;
+				color: #1AA0ED;
+				&:hover{
+					color: #1AB0FF;
+				}
 			}
 		}
 	}
@@ -254,6 +316,7 @@ input[type="checkbox"] {
 		border-top: 1px solid $light-gray-color;
 		padding: 27px 0 27px 10px;
 		line-height: initial;
+		margin-top: 96px;
 		.bookmark-title{
 			font: 1rem $RalewayRegular;
 			line-height: 19px;
@@ -263,59 +326,6 @@ input[type="checkbox"] {
 		}
 	}
 }
-.menu-contact{
-	padding: 67px 0 0 60px;
-	&__kyiv{
-		margin-top: 36px;
-		color: #FFFFFF;
-		p{
-			font: 1rem $RalewayBold;
-			line-height: 19px;
-		}
-	}
-	&__dnepr{
-		margin-top: 36px;
-		color: #FFFFFF;
-		p{
-			font: 1rem $RalewayBold;
-			line-height: 19px;
-		}
-	}
-	.list-tel{
-		color: #FFFFFF;
-		&:hover{ color: $primary-color; }
-	}
-	&__list{
-		margin-top: 64px;
-		color: #FFFFFF;
-		width: 295px;
-		padding: 0;
-		li{
-			list-style: none;
-			line-height: initial;
-			padding: 27px 27px 27px 10px;
-			border-top: 1px solid $light-gray-color;
-			a{
-				color: #FFFFFF;
-				text-decoration: none;
-				&:hover{
-					color: #1AA0ED;
-				}
-			}
-			.list-request{
-				font: 1rem $RalewayBold;
-				line-height: 19px;
-				font-feature-settings: 'pnum' on, 'lnum' on;
-				color: #1AA0ED;
-				&:hover{
-					color: #1AB0FF;
-				}
-			}
-		}
-	}
-}
-
-
 /* hamburger menu end */
 /* black request block start */
 .white-text .request-block{
@@ -388,16 +398,57 @@ input[type="checkbox"] {
 		.privacy-item{
 			display: flex;
 			margin: 57px 0;
-			padding: 0 0 0 25px;
+			padding: 0 0 0 15px;
 			p{
 				margin: 0 0 0 28px;
 				font: 1rem $RalewayRegular; /* identical to box height, or 24px */
 				line-height: 150%;
 				color: #FFFFFF;
+
+			}
+			/*Checkboxes styles*/
+			input[type="checkbox"] { display: none; }
+			input[type="checkbox"] + label {
+				display: block;
+				position: relative;
+				padding-left: 35px;
+				margin-bottom: 20px;
+				font: 1rem Raleway-Regular;
+				line-height: 150%;
+				color: #FFFFFF;
+				cursor: pointer;
+				-webkit-user-select: none;
+				-moz-user-select: none;
+				-ms-user-select: none;
 				span{
 					text-decoration: underline;
 					cursor: pointer;
 				}
+			}
+			input[type="checkbox"] + label:last-child { margin-bottom: 0; }
+			input[type="checkbox"] + label:before {
+				content: '';
+				display: block;
+				width: 20px;
+				height: 20px;
+				border: 1px solid #FFFFFF;
+				position: absolute;
+				left: 0;
+				top: 0;
+				opacity: .6;
+				-webkit-transition: all .12s, border-color .08s;
+				transition: all .12s, border-color .08s;
+			}
+			input[type="checkbox"]:checked + label:before {
+				width: 10px;
+				top: -5px;
+				left: 5px;
+				border-radius: 0;
+				opacity: 1;
+				border-top-color: transparent;
+				border-left-color: transparent;
+				-webkit-transform: rotate(45deg);
+				transform: rotate(45deg);
 			}
 		}
 		.form-sendbtn{
@@ -461,6 +512,7 @@ input[type="checkbox"] {
 			justify-content: space-between;
 			border-bottom: 1px solid rgba(175,189,204,0.2);
 			border-right: none;
+			background: rgba(34, 35, 41, 0.9);
 			.sidebar-left__logo{
 				margin: 0;
 				padding: 0 23px;
@@ -483,49 +535,66 @@ input[type="checkbox"] {
 						border-right: none;
 						position: fixed;
 						border-bottom: 1px solid rgba(175, 189, 204, 0.2);
-						margin-left: 15px;
+						//margin-left: 15px;
 					}
 					.w-70,.w-30{ width: 100%; }
+					.menu-contact__list-mobile{
+						display: inline;
+						position: absolute;
+						bottom: 35px;
+						left: 30px;
+						right: 0;
+						a{
+							color: #FFFFFF;
+							text-decoration: none;
+						}
+					}
 					.menu-list {
-						padding: 80px 0 0;
+						padding: 0 0 0 30px;
+						margin: 0;
 						display: flex;
 						flex-direction: column;
 						justify-content: center;
-						align-items: center;
+						align-items: flex-start;
+						height: 100vh;
 						&__download{
+							display: none;
 							padding: 17px 0 17px 10px;
 							.bookmark-title{ font-size: 1rem; }
 						}
 						li{
 							margin-bottom: 15px;
-							a{ font-size: 3rem; }
+							a{ font-size: 2.25rem; }
 						}
 					}
+					.menu-contact__list-mobile a:hover{ color: $primary-color; }
 					.menu-contact{
-						padding: 0;
-						display: flex;
-						flex-direction: column;
-						justify-content: center;
-						align-items: center;
-						.logo-lg{ display: none; }
-						&__list{
-							margin-top: 30px;
-							li{ padding: 17px 0 17px 10px; }
-						}
-						&__kyiv{
-							margin: 0 25px 0 0;
-							display: inline-block;
-						}
-						&__dnepr{
-							margin: 0;
-							display: inline-block;
-						}
+						display: none;
+						//padding: 0;
+						//display: flex;
+						//flex-direction: column;
+						//justify-content: center;
+						//align-items: center;
+						//.logo-lg{ display: none; }
+						//&__list{
+						//	margin-top: 30px;
+						//	li{ padding: 17px 0 17px 10px; }
+						//}
+						//&__kyiv{
+						//	margin: 0 25px 0 0;
+						//	display: inline-block;
+						//}
+						//&__dnepr{
+						//	margin: 0;
+						//	display: inline-block;
+						//}
 					}
 				}
 			}
-
 		}
 	}
+
+
 }
 @media screen and (min-width: 320px) and (max-width: 479px){
 	.service-header{
@@ -550,17 +619,17 @@ input[type="checkbox"] {
 			width: 100%;
 			display: block;
 		}
-		.privacy-item{
-			margin: 35px 0;
-			padding: 0 20px;
-			p{ margin: 0 0 0 18px;}
-		}
+		.privacy-item{ margin: 40px 0; }
 		.request-block__content{ margin: 60px 0; }
 
 	}
+	.white-text.footer-block .pad-t39-b36{
+		padding-top: 39px;
+		padding-bottom: 0;
+	}
 	.white-text.footer-block .footer-social {
-		margin: 0 20px;
-		svg{ margin: 10px 0; }
+		margin: 0 18px;
+		svg{ margin: 0 0 42px; }
 	}
 }
 @media screen and (min-width: 480px) and (max-width: 767px){
@@ -577,6 +646,7 @@ input[type="checkbox"] {
 				width: 100%;
 				display: block;
 			}
+			.privacy-item{ margin: 40px 0; }
 		}
 		.request-block__content{
 			padding: 60px 0 40px;
@@ -584,7 +654,6 @@ input[type="checkbox"] {
 			.request-block__subtitle{
 				margin: 28px 0;
 			}
-
 		}
 	}
 	.white-text.footer-block{
@@ -606,6 +675,7 @@ input[type="checkbox"] {
 	.white-text.request-block{
 		margin: 0 25px 0 65px;
 		.pl-56{ padding: 0 25px 0 100px; }
+		.privacy-item{ margin: 46px 0; }
 	}
 	.white-text.footer-block {
 		padding: 0 25px 36px 100px

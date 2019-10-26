@@ -3,12 +3,13 @@
 	.clip-text_one {
 		background-image: url('../img/bespoke-software-development.png');
 		background-repeat: no-repeat;
-		background-position: center;
+		background-size: cover;
 	}
 }
 /* service header block end */
 /* service content block start */
 .service-content{
+	margin-bottom: 120px;
 	&__dscrpt{
 		display: flex;
 		flex-wrap: wrap;
@@ -30,10 +31,10 @@
 		list-style: none;
 		li{
 			margin: 24px 0;
-			a{
-				color: #FFFFFF;
-				&:hover{ color: #1AA0ED; }
-			}
+			color: #FFFFFF;
+			&:hover{
+				cursor: pointer;
+				color: #1AA0ED; }
 		}
 	}
 }

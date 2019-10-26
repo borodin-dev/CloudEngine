@@ -73,12 +73,18 @@
 			display: inline-block;
 			align-items: unset;
 		}
+		.privacy-item{ margin: 40px 0; }
 	}
+
 	/* Request Block end */
 	/* Footer Block start */
+	.dark-text.footer-block .pad-t39-b36{
+		padding-top: 39px;
+		padding-bottom: 0;
+	}
 	.dark-text.footer-block .footer-social {
 		margin: 0 20px;
-		svg{ margin: 10px 0; }
+		svg{ margin: 0 0 42px; }
 	}
 	/* Footer Block end */
 }
@@ -159,6 +165,7 @@
 			display: inline-block;
 			align-items: unset;
 		}
+		.privacy-item{ margin: 40px 0; }
 	}
 	/* Request Block end */
 }
@@ -227,6 +234,7 @@
 	.dark-text.request-block{
 		padding-left: 0;
 		.container { padding: 0 16px; }
+		.privacy-item{ margin: 40px 0; }
 	}
 	/* Request Block end */
 }
@@ -290,6 +298,7 @@
 			padding: 0;
 			margin: 0;
 		}
+		.privacy-item{ margin: 46px 0; }
 	}
 	/* Request Block end */
 }
@@ -333,4 +342,95 @@
 		&__form{ margin-left: 45px; }
 	}
 	/* Request Block end */
+}
+@media screen and (max-width: 1199px){
+	.form-sendbtn{
+		background: $primary-color;
+		border-radius: 3px;
+		border: none;
+		font: 0.8125rem $RalewayBold;
+		line-height: 15px;
+		display: flex;
+		align-items: center;
+		text-align: center;
+		letter-spacing: 0.03em;
+		text-transform: uppercase;
+		font-feature-settings: 'pnum' on, 'lnum' on;
+		color: #FFFFFF;
+		padding: 16px 32px;
+		i{ font-style: normal; }
+		&:hover{
+			background: #1AB0FF;
+		}
+	}
+}
+@media screen and (min-width: 1200px) {
+	.var{
+		background: $primary-color;
+		border-radius: 3px;
+		border: none;
+		font: 0.8125rem $RalewayBold;
+		line-height: 15px;
+		display: flex;
+		align-items: center;
+		text-align: center;
+		letter-spacing: 0.03em;
+		text-transform: uppercase;
+		font-feature-settings: 'pnum' on, 'lnum' on;
+		color: #FFFFFF;
+		padding: 16px 32px;
+	}
+	.form-sendbtn {
+		--background: #1AA0ED;
+		--text: #FFFFFF;
+		--font-size: 0.8125rem;
+		--duration: .44s;
+		--move-hover: -4px;
+		--shadow: 0 2px 8px -1px #{rgba(#275efe, .32)};
+		--shadow-hover: 0 4px 20px -2px #{rgba(#275efe, .5)};
+		--font-shadow: var(--font-size);
+		line-height: var(--font-size);
+		outline: none;
+		text-decoration: none;
+		font-size: var(--font-size);
+		background: var(--background);
+		color: var(--text);
+		box-shadow: var(--shadow);
+		transform: translateY(var(--y));
+		transition: transform var(--duration) ease, box-shadow var(--duration) ease;
+		span {
+			display: flex;
+			overflow: hidden;
+			text-shadow: 0 var(--font-shadow) 0 var(--text);
+			i {
+				display: block;
+				backface-visibility: hidden;
+				font-style: normal;
+				transition: transform var(--duration) ease;
+				transform: translateY(var(--m));
+				$i: 1;
+				@while $i < 12 {
+					&:nth-child(#{$i}) {
+						transition-delay: $i / 20 + s;
+					}
+					$i: $i + 1;
+				}
+			}
+		}
+		&:hover {
+			--y: var(--move-hover);
+			--shadow: var(--shadow-hover);
+			i {
+				--m: calc(var(--font-size) * -1);
+			}
+		}
+		&.reverse {
+			--font-shadow: calc(var(--font-size) * -1);
+			&:hover {
+				i {
+					--m: calc(var(--font-size));
+				}
+			}
+		}
+	}
 }

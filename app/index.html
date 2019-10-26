@@ -6,14 +6,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
     <meta name="HandheldFriendly" content="true">
     <title>Cloud Engine</title>
-    <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon">
 </head>
 <body>
     <!--  Sidebar menu -->
     <div class="sticky-top flex-grow-1 w-79">
         <div class="nav position-absolute flex-sm-column sidebar-left__menu">
             <a href="#" class="nav-link sidebar-left__logo">
-                <img src="/img/logo-sm.svg" class="logo-sm" alt="Logo icon"/>
+                <img src="./img/logo-sm.svg" class="logo-sm" alt="Logo icon"/>
             </a>
             <div class="hamburger-sm">
                 <input type="checkbox" id="menuToggle" name="openMenu" />
@@ -21,23 +21,27 @@
                     <span class="open"></span>
                 </label>
                 <div class="menu menuEffects">
-                    <div class="row">
+                    <div class="row no-gutters">
                         <div class="w-70">
                             <div class="open-border-menu"></div>
                             <ul class="menu-list">
                                 <li><a href="portfolio.html">Портфолио</a></li>
                                 <li><a href="services.html">Услуги</a></li>
                                 <li><a href="aboutus.html">О Компании</a></li>
-                                <li><a href="contact.html">Контакты</a></li>
+                                <li class="m-0"><a href="contact.html">Контакты</a></li>
                                 <li class="menu-list__download">
-                                    <img src="/img/icons/bookmark.svg" class="bookmark-icon" alt="Bookmark icon">
+                                    <img src="./img/icons/bookmark.svg" class="bookmark-icon" alt="Bookmark icon">
                                     <a href="#" class="bookmark-title">Скачать презентацию</a>
                                 </li>
                             </ul>
                         </div>
+                        <div class="menu-contact__list-mobile">
+                            <img src="./img/icons/customer-service.svg" class="bookmark-icon" alt="Bookmark icon">
+                            <a class="list-tel" href="tel:+380993444323">Заказать звонок</a>
+                        </div>
                         <div class="w-30 menu-contact">
-                            <img src="/img/logo-lg.svg" class="logo-lg" alt="Logo menu">
-                            <div>
+                            <img src="./img/logo-lg.svg" class="logo-lg" alt="Logo menu">
+                            <div class="hide-address">
                                 <div class="menu-contact__kyiv">
                                     <p>Киев</p>
                                     <a class="list-tel" href="tel:+380993444323">+38 099 344 43 23</a>
@@ -49,15 +53,15 @@
                             </div>
                             <ul class="menu-contact__list">
                                 <li>
-                                    <img src="/img/icons/bookmark.svg" class="bookmark-icon" alt="Bookmark icon">
+                                    <img src="./img/icons/bookmark.svg" class="bookmark-icon" alt="Bookmark icon">
                                     <a class="list-tel" href="tel:#">Заказать звонок</a>
                                 </li>
                                 <li>
-                                    <img src="/img/icons/bookmark.svg" class="bookmark-icon" alt="Bookmark icon">
+                                    <img src="./img/icons/bookmark.svg" class="bookmark-icon" alt="Bookmark icon">
                                     <a class="list-mail" href="mailto:info@cloudengine.project">info@cloudengine.project</a>
                                 </li>
                                 <li>
-                                    <img src="/img/icons/send.svg" class="send-icon" alt="Send icon">
+                                    <img src="./img/icons/send.svg" class="send-icon" alt="Send icon">
                                     <a class="list-request" href="#">Отправить заявку</a>
                                 </li>
                             </ul>
@@ -66,36 +70,50 @@
                 </div>
             </div>
             <a href="#" class="nav-link position-absolute sidebar-left__messenger d-none d-md-block d-lg-block">
-                <img src="/img/icons/messenger.svg" alt="Messenger icon">
+                <svg width="42" height="42" viewBox="0 0 42 42" xmlns="http://www.w3.org/2000/svg">
+                    <path opacity="0.2" d="M21 42C32.598 42 42 32.598 42 21C42 9.40202 32.598 0 21 0C9.40202 0 0 9.40202 0 21C0 32.598 9.40202 42 21 42ZM29.1373 14.1567L22.827 29.9324C22.5066 30.7336 21.39 30.78 21.0041 30.0083L18.5385 25.0769L25 17L16.9308 23.4553L11.9729 20.9296C11.2059 20.5389 11.2582 19.426 12.0585 19.1089L27.8405 12.8557C28.6564 12.5324 29.4633 13.3419 29.1373 14.1567Z" fill="#AFBDCC"/>
+                </svg>
             </a>
         </div>
     </div>
     <!-- /.Sidebar menu -->
     <!-- Header Block -->
     <div class="container-fluid header-block">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-7 col-lg-7 header-block__title">
-                    <h1>Комплекс услуг</h1>
+            <div class="container">
+                <div class="slider">
+                    <div class="row">
+                        <div class="col-md-7 col-lg-7 header-block__title">
+                            <h1>Комплекс услуг</h1>
+                        </div>
+                        <div class="col col-lg-4 header-block__content">
+                            <img src="./img/logo-lg.svg" alt="Logo icon">
+                            <p class="header-block__text">Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться. Lorem Ipsum используют потому, что тот обеспечивает более...</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-7 col-lg-7 header-block__title">
+                            <h1>Услуги дизайнера</h1>
+                        </div>
+                        <div class="col col-lg-4 header-block__content">
+                            <img src="./img/logo-lg.svg" alt="Logo icon">
+                            <p class="header-block__text">Пока НЕ выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться....</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="col col-lg-4 header-block__content">
-                    <img src="/img/logo-lg.svg" alt="Logo icon">
-                    <p class="header-block__text">Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться. Lorem Ipsum используют потому, что тот обеспечивает более...</p>
+                <div class="row align-items-center">
+                    <div class="col-lg-7 header-block__action order-12">
+<!--                        <a href="#" class="header-block__slide01 active-link">01</a>-->
+<!--                        <a href="#" class="header-block__slide02">02</a>-->
+                        <a href="#" class="header-block__arrow">
+                            <img src="./img/next-arrow.svg" alt="Next arrow">
+                        </a>
+                    </div>
+                    <div class="col-lg-4 header-block__portfolio order-2">
+                        <a href="portfolio.html">Портфолио</a>
+                    </div>
                 </div>
             </div>
-            <div class="row align-items-center">
-                <div class="col-lg-7 header-block__action order-12">
-                    <a href="#" class="header-block__slide01 active-link">01</a>
-                    <a href="#" class="header-block__slide02">02</a>
-                    <a href="#" class="header-block__arrow">
-                        <img src="/img/next-arrow.svg" alt="Next arrow">
-                    </a>
-                </div>
-                <div class="col-lg-4 header-block__portfolio order-2">
-                    <a href="portfolio.html">Портфолио</a>
-                </div>
-            </div>
-        </div>
+
     </div>
     <!-- /.Header Block -->
     <!-- Marketing Block -->
@@ -106,22 +124,42 @@
                     <h2>СТРАТЕГИЧЕСКИЙ ПОДХОД К DIGITAL- МАРКЕТИНГУ</h2>
                 </div>
                 <div class="col-lg-5 col-md-8 marketing-block__content">
-                    <ul class="content-list">
+                    <ul class="content-list accordion_container">
                         <li class="content-list__node">
-                            <p>performance- <br>маркетинг</p>
-                            <span>+</span>
+                            <div class="accordion_head d-flex">
+                                <p>performance- <br>маркетинг</p>
+                                <span class="plusminus">+</span>
+                            </div>
+                            <div class="accordion_body" style="display: none;">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam, vel.</p>
+                            </div>
                         </li>
                         <li class="content-list__node">
-                            <p>сайты и мобильные приложения</p>
-                            <span>+</span>
+                            <div class="accordion_head d-flex">
+                                <p>сайты и мобильные приложения</p>
+                                <span class="plusminus">+</span>
+                            </div>
+                            <div class="accordion_body" style="display: none;">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab amet dolores impedit magnam minima omnis optio quisquam quos sequi veritatis?</p>
+                            </div>
                         </li>
                         <li class="content-list__node">
-                            <p>Веб-аналитика и иследования</p>
-                            <span>+</span>
+                            <div class="accordion_head d-flex">
+                                <p>Веб-аналитика и иследования</p>
+                                <span class="plusminus">+</span>
+                            </div>
+                            <div class="accordion_body" style="display: none;">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem ea exercitationem quo ratione soluta voluptatem!</p>
+                            </div>
                         </li>
                         <li class="content-list__node">
-                            <p>Сопровождение проектов и хостинг</p>
-                            <span>+</span>
+                            <div class="accordion_head d-flex">
+                                <p>Сопровождение проектов и хостинг</p>
+                                <span class="plusminus">+</span>
+                            </div>
+                            <div class="accordion_body" style="display: none;">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius.</p>
+                            </div>
                         </li>
                     </ul>
                 </div>
@@ -138,12 +176,12 @@
                         <h2 class="portfolio-block__title">Exrates</h2>
                         <p class="portfolio-block__dscrpt">Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться. Lorem Ipsum используют потому, что тот обеспечивает более...</p>
                         <div class="portfolio-block__subdscrpt">
-                            <p>01 аналитика 02 проектирование 03 дизайн</p>
-                            <p>04 разработка 05 сложная интеграция</p>
-                            <p>06 сопровождение 07 хостинг</p>
+                            <p class="subdscrpt">01 аналитика 02 проектирование 03 дизайн</p>
+                            <p class="subdscrpt">04 разработка 05 сложная интеграция</p>
+                            <p class="subdscrpt">06 сопровождение 07 хостинг</p>
                         </div>
                         <a href="portfolio.html" class="portfolio-block__link">
-                            <img src="/img/icons/chevron-right.svg" alt="Link icon">
+                            <img src="./img/icons/chevron-right.svg" alt="Link icon">
                         </a>
                     </div>
                 </div>
@@ -156,12 +194,12 @@
                         <h2 class="portfolio-block__title">Caer Sidi</h2>
                         <p class="portfolio-block__dscrpt">Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться. Lorem Ipsum используют потому, что тот обеспечивает более...</p>
                         <div class="portfolio-block__subdscrpt">
-                            <p>01 аналитика 02 проектирование 03 дизайн</p>
-                            <p>04 разработка 05 сложная интеграция</p>
-                            <p>06 сопровождение 07 хостинг</p>
+                            <p class="subdscrpt">01 аналитика 02 проектирование 03 дизайн</p>
+                            <p class="subdscrpt">04 разработка 05 сложная интеграция</p>
+                            <p class="subdscrpt">06 сопровождение 07 хостинг</p>
                         </div>
                         <a href="portfolio.html" class="portfolio-block__link">
-                            <img src="/img/icons/chevron-right.svg" alt="Link icon">
+                            <img src="./img/icons/chevron-right.svg" alt="Link icon">
                         </a>
                     </div>
                 </div>
@@ -174,12 +212,12 @@
                         <h2 class="portfolio-block__title">Exrates</h2>
                         <p class="portfolio-block__dscrpt">Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться. Lorem Ipsum используют потому, что тот обеспечивает более...</p>
                         <div class="portfolio-block__subdscrpt">
-                            <p>01 аналитика 02 проектирование 03 дизайн</p>
-                            <p>04 разработка 05 сложная интеграция</p>
-                            <p>06 сопровождение 07 хостинг</p>
+                            <p class="subdscrpt">01 аналитика 02 проектирование 03 дизайн</p>
+                            <p class="subdscrpt">04 разработка 05 сложная интеграция</p>
+                            <p class="subdscrpt">06 сопровождение 07 хостинг</p>
                         </div>
                         <a href="portfolio.html" class="portfolio-block__link">
-                            <img src="/img/icons/chevron-right.svg" alt="Link icon">
+                            <img src="./img/icons/chevron-right.svg" alt="Link icon">
                         </a>
                     </div>
                 </div>
@@ -220,22 +258,22 @@
                             </div>
                             <div class="row">
                                 <div class="col-sm-8">
-                                    <div class="inputBox">
+                                    <div class="inputBox mb-0">
                                         <label for="yourMessage">
                                             <textarea class="input" id="yourMessage" placeholder="Ваше сообщение" rows="1"></textarea>
                                         </label>
                                     </div>
                                 </div>
                             </div>
-                            <div class="row">
+                            <div class="row no-gutters">
                                 <div class="col-lg-12 privacy-item">
-                                    <img src="/img/icons/ok.svg" alt="Ok icon">
-                                    <p>Настоящим подтверждаю, что я согласен на <span>обработку своих персональных данных.</span></p>
+                                    <input type="checkbox" id="box-1">
+                                    <label for="box-1">Настоящим подтверждаю, что я согласен на <span>обработку своих персональных данных.</span></label>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col-sm-12">
-                                    <input type="submit" name="send" class="form-sendbtn" value="Отправить">
+                                    <button type="submit" class="form-sendbtn var">Отправить</button>
                                 </div>
                             </div>
                         </form>

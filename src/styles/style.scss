@@ -1,6 +1,8 @@
 @import "~bootstrap/scss/bootstrap";
 @import "variables";
 @import "custom";
+@import "~slick-carousel/slick/slick";
+
 
 /* header block start */
 .header-block{
@@ -18,6 +20,7 @@
 			text-transform: uppercase;
 			font-feature-settings: 'pnum' on, 'lnum' on;
 			color: #FFFFFF;
+			word-wrap: break-word;
 		}
 	}
 	&__content{ margin: 259px 0 0; }
@@ -29,6 +32,24 @@
 		width: 295px;
 	}
 	/* row 2 */
+	.slick-dots{
+		list-style: none;
+		li{
+			cursor: pointer;
+			margin-right: 20px;
+			display: inline;
+			color: #ffffff;
+			font: 1rem $RalewayBold;
+			line-height: 100%;
+			&:hover{ color: $primary-color; }
+		}
+		.slick-active{
+			cursor: default;
+			text-decoration: none;
+			color: $primary-color;
+
+		}
+	}
 	&__action{
 		a{
 			margin-right: 20px;
@@ -36,7 +57,6 @@
 			color: #ffffff;
 			font: 1rem $RalewayBold;
 			line-height: 100%;
-			&:hover{ color: #1AB0FF; }
 		}
 		.active-link{
 			cursor: default;
@@ -46,13 +66,19 @@
 		}
 		.header-block__arrow{ margin-left: 19px; }
 	}
-	&__portfolio a{
-		font: 1rem $RalewayBold;
-		line-height: 100%;
-		display: flex;
-		align-items: center;
-		color: $primary-color;
-		&:hover{ color: #1AB0FF; }
+	&__portfolio {
+		a {
+			font: 1rem $RalewayBold;
+			line-height: 100%;
+			display: flex;
+			align-items: center;
+			color: $primary-color;
+
+		}
+	}
+	&__action,
+	&__portfolio{
+		a:hover{ color: #1AB0FF; }
 	}
 	.order-12,
 	.order-2{
@@ -78,17 +104,24 @@
 				display: flex;
 				justify-content: space-between;
 				align-items: center;
-				p{
+				flex-direction: column;
+				.accordion_head p{
 					font: 1.5rem $RalewayBold; /* or 29px */
 					line-height: 120%;
 					color: $dark-bg-color;
 					width: 295px;
 				}
-				span{
+				.accordion_head span{
 					font: 600 1.5rem $RalewayRegular; /* or 29px */
 					line-height: 120%;
 					/* blue_active */
 					color: $primary-color;
+				}
+				.accordion_body p{
+					font: 1rem $RalewayRegular;
+					line-height: 150%;
+					color: $gray-text-color;
+					width: 295px;
 				}
 			}
 		}
@@ -128,7 +161,7 @@
 	}
 	&__subdscrpt{
 		margin-bottom: 32px;
-		p{
+		.subdscrpt{
 			margin: 0;
 			font: 0.75rem $RalewayRegular; /* or 18px */
 			line-height: 150%;
@@ -221,34 +254,57 @@
 		.privacy-item{
 			display: flex;
 			margin: 57px 0;
-			padding: 0 0 0 25px;
+			padding: 0 0 0 15px;
 			p{
 				margin: 0 0 0 28px;
 				font: 1rem $RalewayRegular; /* identical to box height, or 24px */
 				line-height: 150%;
 				color: $dark-bg-color;
+
+			}
+			/*Checkboxes styles*/
+			input[type="checkbox"] { display: none; }
+			input[type="checkbox"] + label {
+				display: block;
+				position: relative;
+				padding-left: 35px;
+				margin-bottom: 20px;
+				font: 1rem Raleway-Regular;
+				line-height: 150%;
+				color: $dark-bg-color;
+				cursor: pointer;
+				-webkit-user-select: none;
+				-moz-user-select: none;
+				-ms-user-select: none;
 				span{
 					text-decoration: underline;
 					cursor: pointer;
 				}
 			}
-		}
-		.form-sendbtn{
-			background: $primary-color;
-			border-radius: 3px;
-			border: none;
-			font: 0.8125rem $RalewayBold;
-			line-height: 15px;
-			display: flex;
-			align-items: center;
-			text-align: center;
-			letter-spacing: 0.03em;
-			text-transform: uppercase;
-			font-feature-settings: 'pnum' on, 'lnum' on;
-			color: #FFFFFF;
-			padding: 16px 32px;
-			&:hover{
-				background: #1AB0FF;
+			input[type="checkbox"] + label:last-child { margin-bottom: 0; }
+			input[type="checkbox"] + label:before {
+				content: '';
+				display: block;
+				width: 20px;
+				height: 20px;
+				border: 1px solid $dark-bg-color;
+				position: absolute;
+				left: 0;
+				top: 0;
+				opacity: .6;
+				-webkit-transition: all .12s, border-color .08s;
+				transition: all .12s, border-color .08s;
+			}
+			input[type="checkbox"]:checked + label:before {
+				width: 10px;
+				top: -5px;
+				left: 5px;
+				border-radius: 0;
+				opacity: 1;
+				border-top-color: transparent;
+				border-left-color: transparent;
+				-webkit-transform: rotate(45deg);
+				transform: rotate(45deg);
 			}
 		}
 	}
