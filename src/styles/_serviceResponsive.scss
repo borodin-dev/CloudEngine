@@ -1,6 +1,7 @@
 @media screen and (min-width: 320px) and (max-width: 479px) {
 	/* Service Content Block start */
 	.service-content{
+		margin-bottom: 0;
 		.mt-5{ margin-top: 0 !important; }
 		&__dscrpt {
 			padding: 0 35px;

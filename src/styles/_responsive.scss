@@ -8,7 +8,7 @@
 		}
 		&__title {
 			text-align: center;
-			margin: 160px 0 0;
+			margin: 100px 0 0;
 			h1 {
 				font: 2.25rem $RalewayBold;
 				text-transform: initial;
@@ -16,7 +16,7 @@
 			}
 		}
 		&__content {
-			margin: 36px 0 56px;
+			margin: 36px 0;
 			img { display: none; }
 		}
 		&__text{
@@ -31,7 +31,7 @@
 			.header-block__arrow{ display: none; }
 		}
 		&__portfolio {
-			margin-bottom: 149px;
+			margin-bottom: 100px;
 			text-align: center;
 			a{ display: initial; }
 		}
@@ -122,7 +122,7 @@
 			.header-block__arrow{ display: none; }
 		}
 		&__portfolio {
-			margin-bottom: 149px;
+			margin-bottom: 150px;
 			text-align: center;
 			a{ display: initial; }
 		}
@@ -315,6 +315,7 @@
 	/* header block end */
 	/* Marketing Block start */
 	.marketing-block{
+		margin-left: 79px;
 		&__title{ margin: 125px 0 }
 	}
 	/* Marketing Block end */

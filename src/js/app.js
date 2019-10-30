@@ -70,7 +70,6 @@ $(document).ready(function () {
     }
   });
   /* ====== End of Block Scroll When Menu Open ====== */
-
   /* ====== Form filled - if input filled >= 3 ====== */
   $('.input').blur(function () {
     if ($(this).val().length >= 3) {
@@ -78,13 +77,15 @@ $(document).ready(function () {
     }
   });
   /* ====== End of Form filled - if input filled >= 3 ====== */
+  /* ====== Hover effect on button ====== */
+  $('.form-sendbtn').html((i, html) => {
+    return '<span><i>' + $.trim(html).split('').join('</i><i>') + '</i></span>';
+  });
+  /* ====== End of Hover effect on button ====== */
 
   /* If hover - show link  */
   // $(".portfolio-list__link").hide();
   // $('.grayscale-hover').hover(function () {
   //   $('.portfolio-list__link').fadeToggle('slow');
   // })
-  $('.form-sendbtn').html((i, html) => {
-    return '<span><i>' + $.trim(html).split('').join('</i><i>') + '</i></span>';
-  });
 });

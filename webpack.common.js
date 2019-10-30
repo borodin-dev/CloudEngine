@@ -33,20 +33,6 @@ module.exports = {
                     'php-loader'
                 ]
             },
-            // {
-            //     test: /\.html$/,
-            //     use: [
-            //         {
-            //             loader: "file-loader",
-            //             options: { name: "[name].html" }
-            //         },
-            //         { loader: "extract-loader" },
-            //         {
-            //             loader: "html-loader",
-            //             options: { attr: ["img:src"] }
-            //         },
-            //     ]
-            // },
             //styles
             {
                 test: /\.scss$/,
@@ -126,7 +112,7 @@ module.exports = {
             // },
             // {
             //     test: /(htm|html|xhtml|hbs|handlebars|php|ejs)$/,
-            //     loader: 'htmllint-loader',
+            //     loader: 'html-validate',
             //     exclude: /(node_modules)/,
             // },
         ],

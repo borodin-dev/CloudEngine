@@ -44,6 +44,11 @@ button:focus,
 	height: 100%;
 	overflow: hidden;
 }
+.center-align{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
 .privacy-item {
 	p {
 		span:hover {
@@ -246,7 +251,7 @@ input[type="checkbox"] {
 }
 .menu-contact__list-mobile{ display: none }
 .menu-contact{
-	padding: 67px 0 0 60px;
+	padding: 110px 0 0 60px;
 	.logo-lg{ height: 76.5px; }
 	&__kyiv{
 		margin-top: 36px;
@@ -328,7 +333,9 @@ input[type="checkbox"] {
 }
 /* hamburger menu end */
 /* black request block start */
+.request-block{ margin-left: 79px; }
 .white-text .request-block{
+	margin-left: 79px;
 	&__content{	margin-top: 120px; }
 	&__title{
 		font: 2.25rem $RalewayBold; /* or 43px */
@@ -498,6 +505,7 @@ input[type="checkbox"] {
 
 /* Media Queries */
 @media screen and (min-width: 320px) and (max-width: 767px){
+	.request-block{ margin: 0 15px; }
 	#menuToggle:checked ~ .menuEffects {
 		overflow-x: hidden;
 		overflow-y: visible;
@@ -608,7 +616,7 @@ input[type="checkbox"] {
 		.dscrpt-block{ margin-right: 0 !important; }
 	}
 	.white-text.request-block{
-		padding: 0 25px;
+		padding: 0 15px;
 		.pl-56{ padding: 0 5px;}
 		.request-block__subtitle{
 			font: 1.2rem Raleway-Regular;
@@ -685,7 +693,7 @@ input[type="checkbox"] {
 	.clip-text{ margin-left: 50px; }
 	.menu-list{ padding: 135px 0 0 150px; }
 	.menu-contact {
-		padding: 67px 0 0 35px;
+		padding: 110px 0 0 35px;
 		&__list {
 			width: 240px;
 			li{ padding: 27px 0 27px 10px }
